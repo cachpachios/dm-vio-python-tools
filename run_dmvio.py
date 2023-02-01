@@ -303,7 +303,7 @@ def build_code(build_folder, build_type, cmake_command=None):
     if result_cmake.returncode != 0:
         print("CMake failed!")
         sys.exit(1)
-    result = subprocess.run('make -j8', shell=True, cwd=build_folder)
+    result = subprocess.run('make -j3', shell=True, cwd=build_folder)
     if result.returncode != 0:
         print("Compilation failed!")
         sys.exit(1)
